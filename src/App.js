@@ -5,7 +5,7 @@ import HomePage from "./pages/homepage/HomePage.js";
 
 const HatsPage = () => (
   <div>
-    <h1>Hats Page</h1>
+    <h1>HATS PAGE </h1>
   </div>
 );
 
@@ -19,5 +19,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
