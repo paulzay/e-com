@@ -5,18 +5,19 @@ import CartItem from "../cart-item/CartItem";
 import "./cart-dropdown.scss";
 import CustomButton from "../custom-btn/CustomButton";
 
-const CartDropdown = (CartItems) => (
+const CartDropdown = ({ cartItems }) => (
   <div className="cart-dropdown">
     <div className="cart-items">
-      {CartItems.map((CartItem) => (
-        <CartItem key={CartItem.id} item={CartItem} />
+      {cartItems.map((cartItem) => (
+        <CartItem key={cartItem.id} item={cartItem} />
       ))}
     </div>
     <CustomButton>GO TO CHECKOUT</CustomButton>
   </div>
 );
 
-const mapStateToProps = ({ cart: { CartItems } }) => ({
-  CartItems,
+const mapStateToProps = ({ cart: { cartItems } }) => ({
+  cartItems,
 });
+
 export default connect(mapStateToProps)(CartDropdown);
